@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte seu Brownie Perfeito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <header>
+            <div class="hearts">❤️❤️</div>
+            <h1>Você é apaixonado por brownies?</h1>
+            <h2>Monte o brownie perfeito para a feira!</h2>
+        </header>
+
+
+        <form id="brownieForm">
+            <!-- Pergunta 1 -->
+            <div class="card-question">
+                <label class="question-title">1. De 1 a 5, o quanto você ama brownies?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="love_level" value="1"> 1</label>
+                    <label><input type="radio" name="love_level" value="2"> 2</label>
+                    <label><input type="radio" name="love_level" value="3" checked> 3</label>
+                    <label><input type="radio" name="love_level" value="4"> 4</label>
+                    <label><input type="radio" name="love_level" value="5"> 5</label>
+                </div>
+            </div>
+
+
+            <!-- Pergunta 2 -->
+            <div class="card-question">
+                <label class="question-title">2. Você gostaria de ter 4 opções de recheios artesanais para personalizar seu brownie?</label>
+                <p class="subtitle">(ganache meio amargo, ganache branco, brigadeiro de leite em pó e geleia de morango)</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="wants_fillings" value="Sim" checked> Sim</label>
+                    <label><input type="radio" name="wants_fillings" value="Não"> Não</label>
+                </div>
+            </div>
+
+
+            <!-- Pergunta 3 -->
+            <div class="card-question">
+                <label class="question-title">3. Além dos recheios, qual desses adicionais você gostaria de colocar por cima?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="additional" value="Morangos frescos fatiados" checked> Morangos frescos fatiados</label>
+                    <label><input type="radio" name="additional" value="Uma bola de sorvete de creme"> Uma bola de sorvete de creme</label>
+                    <label><input type="radio" name="additional" value="Confeitos crocantes (M&M's ou KitKat)"> Confeitos crocantes (M&M's ou KitKat)</label>
+                </div>
+            </div>
+
+
+            <!-- Pergunta 4 -->
+            <div class="card-question">
+                <label class="question-title">4. Pensando no consumo aqui na feira, qual formato você prefere?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="format" value="marmitinha" checked> Brownie na marmitinha (fácil de comer com colher)</label>
+                    <label><input type="radio" name="format" value="sanduiche"> Brownie em formato de sanduíche (comer com as mãos)</label>
+                    <label><input type="radio" name="format" value="caixa"> Caixa com mini brownies (para levar para casa)</label>
+                </div>
+            </div>
+
+
+            <!-- Pergunta 5 -->
+            <div class="card-question">
+                <label class="question-title">5. Quanto você pagaria por uma fatia bem caprichada?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="price_range" value="R$ 12 a R$ 15" checked> R$ 12 a R$ 15</label>
+                    <label><input type="radio" name="price_range" value="R$ 15 a R$ 20"> R$ 15 a R$ 20</label>
+                </div>
+            </div>
+
+
+            <button type="submit" id="btnFinalizar">Finalizar Pedido</button>
+        </form>
+
+
+        <!-- Área de Resultado / Recibo -->
+        <div id="result" class="hidden">
+            <h3>🍫 Pedido Confirmado!</h3>
+            <p id="receiptText"></p>
+            <div id="luckyBonus"></div>
+        </div>
+    </div>
+
+
+    <!-- Importante: type="module" para permitir o uso de import/export -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
